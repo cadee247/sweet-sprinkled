@@ -172,29 +172,29 @@ export default function About() {
         </div>
       </section>
 
-      {/* Testimonial Section */}
-      <section className="testimonial-section container-xxl py-6">
-        <div className="container">
-          <div className="text-center mx-auto mb-5" style={{ maxWidth: "600px" }}>
-            <p className="section-subtitle">// Happy Customers</p>
-            <h2 className="section-title">What People Are Saying</h2>
-          </div>
-          <div className="row g-4">
-            {testimonials.map((t, i) => (
-              <div className="col-lg-4 col-md-6" key={i}>
-                <div className="testimonial-item rounded shadow-sm">
-                  <img src={t.avatar} alt={t.name} className="rounded-circle mb-3" width={80} height={80} />
-                  <p className="testimonial-text">"{t.text}"</p>
-                  <h5 className="testimonial-name">{t.name}</h5>
-                  <div className="testimonial-rating">
-                    {"★".repeat(t.rating)}{"☆".repeat(5 - t.rating)}
-                  </div>
-                </div>
-              </div>
-            ))}
+{/* Testimonial Section */}
+<section className="testimonial-section container-xxl py-6">
+  <div className="container">
+    <div className="text-center mx-auto mb-5" style={{ maxWidth: "600px" }}>
+      <p className="section-subtitle">// Happy Customers</p>
+      <h2 className="section-title">What People Are Saying</h2>
+    </div>
+    <div className="row g-4">
+      {testimonials.map((t, i) => (
+        <div className="col-lg-4 col-md-6" key={i}>
+          <div className="testimonial-item rounded shadow-sm">
+            {/* Removed avatar image */}
+            <p className="testimonial-text">"{t.text}"</p>
+            <h5 className="testimonial-name">{t.name}</h5>
+            <div className="testimonial-rating">
+              {"★".repeat(t.rating)}{"☆".repeat(5 - t.rating)}
+            </div>
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
     </>
   );
 }
